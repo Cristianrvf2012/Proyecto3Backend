@@ -1,18 +1,16 @@
 import express from 'express'
 
-export default class server{
+export default class Server{
     public app: express.Application;
-    public port:number = 6000;
-    
+    public port:any = process.env.PORT || 3000;
 
     constructor(){
         this.app = express();
     }
 
-    Start(callback:Function) {
+    Start(callback:Function){
         this.app.listen(this.port,callback());
     }
-        
-    }
 
+}
 
