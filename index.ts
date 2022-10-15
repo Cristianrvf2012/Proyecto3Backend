@@ -12,7 +12,7 @@ server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/',defaultRoutes);
 server.app.use('/personajes',personajeRoutes);
 
-mongoose.connect('mongodb://localhost:27017/mundomariobrosDb',(error)=>{
+mongoose.connect('mongodb+srv://usr_personajes:magdalena2012@cluster0.rru9h3m.mongodb.net//mundomariobrosDb',(error)=>{
     if(error){
         throw error;
     }
